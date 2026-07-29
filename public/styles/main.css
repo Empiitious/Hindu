@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #f7f3ea 0%, #fdfdfd 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2937;
+}
+
+main {
+  min-height: 100vh;
+  padding: 2rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-header,
+.detail-card,
+.form-card,
+.post-card,
+.empty-state {
+  width: min(760px, 100%);
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #8b5cf6;
+  margin-bottom: 0.4rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin: 0 0 0.4rem;
+}
+
+.subtitle,
+.post-content,
+.post-card p,
+.empty-state p {
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.post-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.post-card h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.blog-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+label {
+  font-weight: 600;
+  color: #374151;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+textarea {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  background: #fff;
+  color: #111827;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.12);
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  color: white;
+}
+
+.secondary-btn {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.danger-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+}
+
+footer {
+  text-align: center;
+  color: #6b7280;
+  padding: 1rem 0 0;
+}

@@ -1,0 +1,35 @@
+<%- include("partials/header.ejs") %>
+
+<div class="page-header">
+  <div>
+    <p class="eyebrow">Daily Journal</p>
+    <h1>The Hindu</h1>
+    <p class="subtitle">Thoughtful posts, beautifully presented.</p>
+  </div>
+  <form action="/create" method="POST">
+    <button type="submit" class="primary-btn">Create Post</button>
+  </form>
+</div>
+
+<section class="posts-section">
+  <% if(locals.posts.length > 0) { %>
+    <div class="post-list">
+      <% posts.forEach(function(post) { %>
+        <article class="post-card">
+          <h2><%= post.title %></h2>
+          <p><%= post.content %></p>
+          <form action="/<%= encodeURIComponent(post.title) %>" method="GET">
+            <button type="submit" class="secondary-btn">Read More</button>
+          </form>
+        </article>
+      <% }) %>
+    </div>
+  <% } else { %>
+    <div class="empty-state">
+      <h2>No posts yet</h2>
+      <p>Start your first blog entry by creating a post.</p>
+    </div>
+  <% } %>
+</section>
+
+<%- include("partials/footer.ejs") %>

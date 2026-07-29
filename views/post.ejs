@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") %>
+
+<article class="detail-card">
+  <p class="eyebrow">Blog Post</p>
+  <h1><%= post.title %></h1>
+  <p class="post-content"><%= post.content %></p>
+
+  <div class="actions">
+    <form action="/edit/<%= encodeURIComponent(post.title) %>" method="GET">
+      <button type="submit" class="primary-btn">Edit Post</button>
+    </form>
+
+    <form action="/delete/<%= encodeURIComponent(post.title) %>" method="POST">
+      <button type="submit" class="danger-btn">Delete Post</button>
+    </form>
+  </div>
+</article>
+
+<%- include("partials/footer.ejs") %>
