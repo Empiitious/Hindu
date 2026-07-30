@@ -5,6 +5,33 @@ body {
   color: #1f2937;
 }
 
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.brand {
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #4338ca;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 600;
+}
+
 main {
   min-height: 100vh;
   padding: 2rem 1.5rem 4rem;
@@ -13,7 +40,7 @@ main {
   align-items: center;
 }
 
-.page-header,
+.hero,
 .detail-card,
 .form-card,
 .post-card,
@@ -26,7 +53,7 @@ main {
   margin-bottom: 1.5rem;
 }
 
-.page-header {
+.hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -135,3 +162,20 @@ footer {
   color: #6b7280;
   padding: 1rem 0 0;
 }
+
+@media (max-width: 700px) {
+  .topbar,
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    margin-top: 0.6rem;
+  }
+
+  .hero {
+    padding: 1.5rem;
+  }
+}
+
