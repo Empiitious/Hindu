@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  background: linear-gradient(135deg, #f7f3ea 0%, #fdfdfd 100%);
+  background: linear-gradient(135deg, #f6efe7 0%, #fcfaf7 100%);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #1f2937;
+  color: #243447;
 }
 
 .topbar {
@@ -10,15 +10,15 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 2rem;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 6px 18px rgba(36, 52, 71, 0.08);
 }
 
 .brand {
   text-decoration: none;
   font-size: 1.25rem;
   font-weight: 700;
-  color: #4338ca;
+  color: #7a3e00;
 }
 
 .nav-links {
@@ -41,14 +41,16 @@ main {
 }
 
 .hero,
+.featured-post,
 .detail-card,
 .form-card,
 .post-card,
 .empty-state {
   width: min(760px, 100%);
-  background: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+  background: #fffcf8;
+  border: 1px solid #efe2cb;
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(36, 52, 71, 0.08);
   padding: 2rem;
   margin-bottom: 1.5rem;
 }
@@ -65,8 +67,13 @@ main {
   letter-spacing: 0.2em;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #8b5cf6;
+  color: #b25c00;
   margin-bottom: 0.4rem;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 h1 {
@@ -87,9 +94,21 @@ h1 {
   gap: 1rem;
 }
 
+.post-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  border-left: 4px solid #d98c21;
+}
+
 .post-card h2 {
   margin-top: 0;
   font-size: 1.25rem;
+  color: #111827;
+}
+
+.post-card p {
+  margin: 0;
 }
 
 .blog-form {
@@ -112,10 +131,18 @@ button {
 input,
 textarea {
   border: 1px solid #d1d5db;
-  border-radius: 10px;
-  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  padding: 0.95rem 1rem;
   background: #fff;
   color: #111827;
+  box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #d98c21;
+  box-shadow: 0 0 0 3px rgba(217, 140, 33, 0.16);
 }
 
 textarea {
@@ -136,13 +163,13 @@ button:hover {
 }
 
 .primary-btn {
-  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  background: linear-gradient(135deg, #d98c21, #a24d00);
   color: white;
 }
 
 .secondary-btn {
-  background: #eef2ff;
-  color: #4338ca;
+  background: #fff3e1;
+  color: #8d4600;
 }
 
 .danger-btn {
@@ -161,6 +188,14 @@ footer {
   text-align: center;
   color: #6b7280;
   padding: 1rem 0 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 700px) {
